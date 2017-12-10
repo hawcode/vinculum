@@ -1,1 +1,16 @@
 language: java
+sudo: false
+install: true
+addons:
+  sonarcloud:
+    organization: "hawcode"
+    token:
+      secure: "fc2e4e1a956b292b1ab336bebf4eb47222598d44"
+jdk:
+  - oraclejdk8
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
