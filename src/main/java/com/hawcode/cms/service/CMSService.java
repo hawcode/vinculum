@@ -14,8 +14,7 @@ import com.hawcode.cms.dao.CMSDataAccessObject;
  * Service to retrieve the information from the CMS.
  * <p>Makes use of the DAO as abstraction layer.
  * 
- * @author Benjamin Vega
- * @since 1.0
+git rebase -i
  */
 @Entity
 @Service("cmsService")
@@ -32,17 +31,16 @@ public class CMSService {
 		this.dao.setClassType(type);
 	}
 
-	/**
-	 * Return the text given the content ID
-	 * @param id The content ID
-	 * @param language The desired language
-	 * @return The corresponding text
-	 */
-	public String findTextByContentId(String id, String language, Class<? extends Enum> enumType) {
-        return dao.findTextByContentId(id, language, enumType);
+	public void setEnumType(Class<? extends Enum> enumType){
+		this.dao.setEnumType(enumType);
 	}
 
-	public Map<String, String> getAllTextContents(String language, Class<? extends Enum> enumType){
-		return dao.getAllTextContents(language, enumType);
+	public String findTextByContentId(String id, String language) {
+        return dao.findTextByContentId(id, language);
 	}
+
+	public Map<String, String> getAllTextContents(String language){
+		return dao.getAllTextContents(language);
+	}
+
 }

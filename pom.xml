@@ -4,11 +4,37 @@
 
     <groupId>com.hawcode</groupId>
     <artifactId>cms-connect</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
     <name>cms-connect</name>
-    <url>http://maven.apache.org</url>
+    <description>CMS-Connect is a dependency for adding an abstraction layer in the development of applications.
+        It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
+        web content writing/creation tasks and the software development tasks.
+    </description>
+    <url>http://www.hawcode.com</url>
+
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE Version 3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Benjamin Vega</name>
+            <email>benjamin.vega@hawcode.com</email>
+            <organization>Hawcode Diseño Atomico SL</organization>
+            <organizationUrl>http://www.hawcode.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:hawcode/cms-connect.git</connection>
+        <developerConnection>scm:git:ssh://github.com:hawcode/cms-connect.git</developerConnection>
+        <url>https://github.com/hawcode/cms-connectr</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
