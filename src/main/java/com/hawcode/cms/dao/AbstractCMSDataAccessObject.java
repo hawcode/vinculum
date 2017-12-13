@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
  * Abstract class for the CMS DAO - Abstraction layer between the application and the CMS.
  * 
  * @author Benjamin Vega
- * @since 1.0
  */
 public abstract class AbstractCMSDataAccessObject {
 
