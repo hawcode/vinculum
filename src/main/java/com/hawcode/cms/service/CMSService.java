@@ -13,17 +13,11 @@ import com.hawcode.cms.dao.CMSDataAccessObject;
 /**
  * Service to retrieve the information from the CMS.
  * <p>Makes use of the DAO as abstraction layer.
- * 
-git rebase -i
  */
-@Entity
 @Service("cmsService")
 @Transactional("transactionManagerCms")
 public class CMSService {
 
-	/**
-	 * DAO layer object
-	 */
 	@Autowired
 	private CMSDataAccessObject dao;
 

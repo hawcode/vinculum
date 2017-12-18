@@ -26,7 +26,7 @@ public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject impleme
 	public Map<String, String> getAllTextContents(String language){
 		Map<String, String> map = new HashMap<String, String>();
 		Enum<?> lng = Enum.valueOf(enumType, language);
-		Criteria criteria = getSession().createCriteria(classType.getName() );
+		Criteria criteria = getSession().createCriteria(classType.getName());
 		List<Class<MultiLanguage>>list = criteria.list();
 		for (Object cid : list) {
 			map.put(classType.cast(cid).getCid() ,classType.cast(cid).getText(lng));
