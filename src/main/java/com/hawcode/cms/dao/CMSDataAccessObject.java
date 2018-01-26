@@ -15,11 +15,6 @@ public interface CMSDataAccessObject {
 	 */
 	void setClassType(Class<?> classType);
 
-	/**
-	 * Set the class type of the enumeration that is going to be used for selecting the columns.
-	 * @param enumType Class type of the enumeration defined by the developer.
-	 */
-	void setEnumType(Class<? extends Enum> enumType);
 	
 	/**
 	 * Search for the corresponding text of the given ID and the given language.

@@ -2,8 +2,6 @@ package com.hawcode.cms.service;
 
 import java.util.Map;
 
-import javax.persistence.Entity;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,10 +21,6 @@ public class CMSService {
 
 	public void setClassType(Class<?> type){
 		this.dao.setClassType(type);
-	}
-
-	public void setEnumType(Class<? extends Enum> enumType){
-		this.dao.setEnumType(enumType);
 	}
 
 	public String findTextByContentId(String id, String language) {
