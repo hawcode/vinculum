@@ -9,7 +9,7 @@ import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.hawcode.cms.utils.MultiLanguage;
+import com.hawcode.cms.utils.Selectable;
 
 /**
  * Implementation class for the CMS DAO - Abstraction layer between the application and the CMS.
@@ -19,17 +19,16 @@ import com.hawcode.cms.utils.MultiLanguage;
 @Repository("cmsDao")
 public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject implements CMSDataAccessObject{
 
-	private Class<MultiLanguage> classType;
+	private Class<Selectable> classType;
 
 	private Class<? extends Enum> enumType;
 
 	public Map<String, String> getAllTextContents(String language){
 		Map<String, String> map = new HashMap<String, String>();
-		Enum<?> lng = Enum.valueOf(enumType, language);
 		Criteria criteria = getSession().createCriteria(classType.getName());
-		List<Class<MultiLanguage>>list = criteria.list();
+		List<Class<Selectable>>list = criteria.list();
 		for (Object cid : list) {
-			map.put(classType.cast(cid).getCid() ,classType.cast(cid).getText(lng));
+			map.put(classType.cast(cid).getCid() ,classType.cast(cid).getText(language));
 		}
 		return map;
 	}
@@ -38,20 +37,15 @@ public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject impleme
 		Criteria criteria = getSession().createCriteria(classType.getName() );
 		criteria.add(Restrictions.eq("cnt_id", id));
 		Object o = criteria.uniqueResult();
-		Enum.valueOf(enumType, language);
-		Enum<?> lng = Enum.valueOf(enumType, language);
 		if(o != null) {
-			return classType.cast(o).getText(lng);
+			return classType.cast(o).getText(language);
 		} else {
 			return "Error trying to access DB using " + classType.getName() + " as a model";
 		}
 	}
 	
 	public void setClassType(Class<?> classType) {
-		this.classType = (Class<MultiLanguage>) classType;
+		this.classType = (Class<Selectable>) classType;
 	}
 
-	public void setEnumType(Class<? extends Enum> enumType) {
-		this.enumType = enumType;
-	}
 }
