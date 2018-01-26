@@ -8,3 +8,5 @@ cms2\.iml
 \.settings/
 \.classpath
 \.project
+
+*.iml

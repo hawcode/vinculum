@@ -12,23 +12,39 @@
         It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
         web content writing/creation tasks and the software development tasks.
     </description>
-    <url>http://www.hawcode.com</url>
+    <url>https://github.com/hawcode/cms-connect</url>
+    <inceptionYear>2017</inceptionYear>
 
     <licenses>
         <license>
             <name>GNU GENERAL PUBLIC LICENSE Version 3</name>
             <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <organization>
+        <name>Hawcode Diseño Atómico S.L.</name>
+        <url>http://www.hawcode.com</url>
+    </organization>
 
     <developers>
         <developer>
             <name>Benjamin Vega</name>
             <email>benjamin.vega@hawcode.com</email>
-            <organization>Hawcode Diseño Atomico SL</organization>
+            <organization>Hawcode Diseño Atómico S.L.</organization>
             <organizationUrl>http://www.hawcode.com</organizationUrl>
         </developer>
     </developers>
+
+    <contributors>
+        <contributor>
+            <name>Miguel Ruiz</name>
+            <email>miguel.ruiz@hawcode.com</email>
+            <organization>Hawcode Diseño Atómico SL</organization>
+            <organizationUrl>http://www.hawcode.com</organizationUrl>
+        </contributor>
+    </contributors>
 
     <scm>
         <connection>scm:git:git@github.com:hawcode/cms-connect.git</connection>
@@ -41,6 +57,8 @@
         <springframework.version>4.0.6.RELEASE</springframework.version>
         <hibernate.version>4.3.6.Final</hibernate.version>
         <junit.version>4.12</junit.version>
+        <mockito.version>2.13.0</mockito.version>
+        <h2.version>1.4.196</h2.version>
     </properties>
     <repositories>
         <repository>
@@ -77,6 +95,18 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
