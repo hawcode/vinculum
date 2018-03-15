@@ -1,21 +1,27 @@
-package com.hawcode.cms.utils;
+/*
+ * ************************************************************************
+ *
+ *  Copyright (c) 2018. Hawcode - Diseño Atómico SL
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ *
+ * ************************************************************************
+ */
 
-import com.hawcode.cms.service.CMSService;
-import org.springframework.beans.factory.annotation.Autowired;
+package com.hawcode.vinculum.utils;
 
+import com.hawcode.vinculum.service.CMSService;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * 
  * This class contains the all the resources needed for rendering a view
- * 
- * @author Benjamin Vega
  */
 public class ContentManagedData {
 
-
-	private Map<String, String> map = new HashMap<String, String>();
+	public Map<String, String> map = new HashMap<String, String>();
 
 	/**
 	 * Constructor for the ContentManagedData class. It retrieves all the resources of a Table.

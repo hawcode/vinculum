@@ -1,4 +1,15 @@
-package com.hawcode.cms.dao;
+/*
+ * ************************************************************************
+ *
+ *  Copyright (c) 2018. Hawcode - Diseño Atómico SL
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ *
+ * ************************************************************************
+ */
+
+package com.hawcode.vinculum.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,16 +18,17 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * Abstract class for the CMS DAO - Abstraction layer between the application and the CMS.
- * 
- * @author Benjamin Vega
  */
 public abstract class AbstractCMSDataAccessObject {
 
-	@Autowired
-	@Qualifier("sessionFactoryCms")
-    private SessionFactory sessionFactoryCms;
+	private final SessionFactory sessionFactoryCms;
 
-	/**
+    @Autowired
+    public AbstractCMSDataAccessObject(@Qualifier("sessionFactoryCms") SessionFactory sessionFactoryCms) {
+        this.sessionFactoryCms = sessionFactoryCms;
+    }
+
+    /**
 	 * Get session method.
 	 * @return The current session.
 	 */

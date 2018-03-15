@@ -1,20 +1,27 @@
-package com.hawcode.cms.dao;
+/*
+ * ************************************************************************
+ *
+ *  Copyright (c) 2018. Hawcode - Diseño Atómico SL
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ *
+ * ************************************************************************
+ */
 
+package com.hawcode.vinculum.dao;
 
+import com.hawcode.vinculum.utils.Selectable;
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.Criteria;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.stereotype.Repository;
-
-import com.hawcode.cms.utils.Selectable;
-
 /**
  * Implementation class for the CMS DAO - Abstraction layer between the application and the CMS.
- * 
- * @author Benjamin Vega
  */
 @Repository("cmsDao")
 public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject implements CMSDataAccessObject{
@@ -22,6 +29,10 @@ public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject impleme
 	private Class<Selectable> classType;
 
 	private Class<? extends Enum> enumType;
+
+	public CMSDataAccessObjectImpl(SessionFactory sessionFactoryCms) {
+		super(sessionFactoryCms);
+	}
 
 	public Map<String, String> getAllTextContents(String language){
 		Map<String, String> map = new HashMap<String, String>();
@@ -47,5 +58,4 @@ public class CMSDataAccessObjectImpl extends AbstractCMSDataAccessObject impleme
 	public void setClassType(Class<?> classType) {
 		this.classType = (Class<Selectable>) classType;
 	}
-
 }

@@ -1,9 +1,18 @@
-package com.hawcode.cms.utils;
+/*
+ * ************************************************************************
+ *
+ *  Copyright (c) 2018. Hawcode - Diseño Atómico SL
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ *
+ * ************************************************************************
+ */
+
+package com.hawcode.vinculum.utils;
 
 /**
- *
  * Interface that all the Entities have to implement for being able to be used by the DAO.
- *  @author Benjamin Vega
  */
 public interface Selectable {
 	

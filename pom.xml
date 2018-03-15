@@ -1,18 +1,19 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hawcode</groupId>
-    <artifactId>cms-connect</artifactId>
-    <version>0.1.1</version>
+    <artifactId>vinculum</artifactId>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>cms-connect</name>
+    <name>vinculum</name>
     <description>CMS-Connect is a dependency for adding an abstraction layer in the development of applications.
         It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
         web content writing/creation tasks and the software development tasks.
     </description>
-    <url>https://github.com/hawcode/cms-connect</url>
+    <url></url>
     <inceptionYear>2017</inceptionYear>
 
     <licenses>
@@ -24,7 +25,7 @@
     </licenses>
 
     <organization>
-        <name>Hawcode Diseño Atómico S.L.</name>
+        <name>Hawcode - Diseño Atómico S.L.</name>
         <url>http://www.hawcode.com</url>
     </organization>
 
@@ -32,19 +33,16 @@
         <developer>
             <name>Benjamin Vega</name>
             <email>benjamin.vega@hawcode.com</email>
-            <organization>Hawcode Diseño Atómico S.L.</organization>
+            <organization>Hawcode - Diseño Atómico S.L.</organization>
+            <organizationUrl>http://www.hawcode.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Jose Lara</name>
+            <email>jose.lara@hawcode.com</email>
+            <organization>Hawcode - Diseño Atómico S.L.</organization>
             <organizationUrl>http://www.hawcode.com</organizationUrl>
         </developer>
     </developers>
-
-    <contributors>
-        <contributor>
-            <name>Miguel Ruiz</name>
-            <email>miguel.ruiz@hawcode.com</email>
-            <organization>Hawcode Diseño Atómico SL</organization>
-            <organizationUrl>http://www.hawcode.com</organizationUrl>
-        </contributor>
-    </contributors>
 
     <scm>
         <connection>scm:git:git@github.com:hawcode/cms-connect.git</connection>
@@ -60,6 +58,7 @@
         <mockito.version>2.13.0</mockito.version>
         <h2.version>1.4.196</h2.version>
     </properties>
+
     <repositories>
         <repository>
             <id>org.springframework.maven.milestone</id>
@@ -67,6 +66,7 @@
             <url>http://maven.springframework.org/milestone/</url>
         </repository>
     </repositories>
+
     <dependencies>
         <!-- Spring Framework -->
         <dependency>
@@ -110,4 +110,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 </project>

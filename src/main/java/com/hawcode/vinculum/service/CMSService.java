@@ -1,12 +1,21 @@
-package com.hawcode.cms.service;
+/*
+ * ************************************************************************
+ *
+ *  Copyright (c) 2018. Hawcode - Diseño Atómico SL
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ *
+ * ************************************************************************
+ */
 
-import java.util.Map;
+package com.hawcode.vinculum.service;
 
+import com.hawcode.vinculum.dao.CMSDataAccessObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.hawcode.cms.dao.CMSDataAccessObject;
+import java.util.Map;
 
 /**
  * Service to retrieve the information from the CMS.
