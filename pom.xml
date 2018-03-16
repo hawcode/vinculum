@@ -9,12 +9,12 @@
     <packaging>jar</packaging>
 
     <name>vinculum</name>
-    <description>CMS-Connect is a dependency for adding an abstraction layer in the development of applications.
+    <description>Vinculum is a dependency for adding an abstraction layer in the development of applications.
         It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
         web content writing/creation tasks and the software development tasks.
     </description>
     <url></url>
-    <inceptionYear>2017</inceptionYear>
+    <inceptionYear>2018</inceptionYear>
 
     <licenses>
         <license>
@@ -46,7 +46,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:hawcode/cms-connect.git</connection>
-        <developerConnection>scm:git:ssh://github.com:hawcode/cms-connect.git</developerConnection>
+        <developerConnection>scm:git:ssh://github.com:hawcode/vinculum.git</developerConnection>
         <url>https://github.com/hawcode/cms-connectr</url>
     </scm>
 

@@ -30,7 +30,7 @@ public class ContentManagedData {
 	 * @param EntityType The CMS Service.
 	 * @param language The language in which the text will be displayed.
 	 */
-	public ContentManagedData(CMSService cmsService, Class<?> EntityType, String language) {
+	ContentManagedData(CMSService cmsService, Class<?> EntityType, String language) {
         cmsService.setClassType(EntityType);
 	    map = cmsService.getAllTextContents(language);
 	}
