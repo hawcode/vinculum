@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EnableVinculumAspect {
+public class EnableVinculumImpl {
 
     @Bean
     public CMDService serviceInit(){
@@ -18,5 +18,4 @@ public class EnableVinculumAspect {
     public CMDRepository repositoryInit(){
         return new CMDRepositoryImpl();
     }
-
 }
