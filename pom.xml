@@ -5,15 +5,22 @@
 
     <groupId>com.hawcode</groupId>
     <artifactId>vinculum</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
 
-    <name>vinculum</name>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <name>Vinculum</name>
     <description>Vinculum is a dependency for adding an abstraction layer in the development of applications.
         It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
-        web content writing/creation tasks and the software development tasks.
+        web content writing/creation tasks and the Software development tasks.
     </description>
-    <url></url>
+    <url>http://www.hawcode.com/vinculum</url>
     <inceptionYear>2018</inceptionYear>
 
     <licenses>
@@ -45,18 +52,15 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:hawcode/cms-connect.git</connection>
+        <connection>scm:git:git@github.com:hawcode/vinculum.git</connection>
         <developerConnection>scm:git:ssh://github.com:hawcode/vinculum.git</developerConnection>
-        <url>https://github.com/hawcode/cms-connectr</url>
+        <url>https://github.com/hawcode/vinculum</url>
     </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <springframework.version>4.0.6.RELEASE</springframework.version>
-        <hibernate.version>4.3.6.Final</hibernate.version>
-        <junit.version>4.12</junit.version>
-        <mockito.version>2.13.0</mockito.version>
-        <h2.version>1.4.196</h2.version>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
     </properties>
 
     <repositories>
@@ -68,47 +72,49 @@
     </repositories>
 
     <dependencies>
-        <!-- Spring Framework -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${springframework.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${springframework.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${springframework.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- Hibernate -->
+
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
         </dependency>
-        <!-- Dependencies for tests -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>${h2.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

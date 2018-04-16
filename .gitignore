@@ -2,7 +2,7 @@ target/
 
 # IntelliJ IDEA conf files
 \.idea/
-cms2\.iml
+vinculum\.iml
 
 # Eclipse conf files
 \.settings/
