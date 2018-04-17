@@ -9,7 +9,7 @@
  * ************************************************************************
  */
 
-package com.hawcode.vinculum.controller;
+package com.hawcode.vinculum.model;
 
 import lombok.Getter;
 import lombok.Setter;
