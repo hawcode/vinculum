@@ -5,12 +5,12 @@
 # Vinculum
 Dependency to connect a Java project with a Headless CMS.
 
-Vinculum is available in the MavenRepository. That means you can include it in your project without downloading any file. Just include the dependency in your POM!
+Vinculum is available in the MavenRepository. That means you can include it in your project without downloading any file. Just add the dependency in your POM!
 
 Steps:
 
-- Create an enum that is visible for the whole project. This enum must contain the name of every column in your Headless CMS table without including the Content ID.
-- Create an Hibernate entity for every table that you would like to reference from the Headless CMS. The entity must define every column from the table (including the Content ID) and must implement the MultiLanguage interface.
-- In the configuration class from your Spring project, define your Headless CMS instance URL, as well as the other parameters from the database.
-- Instantiate the CMSService (Autowired annotation) in your controller.
-- According to the controller that is requesting the desired view, invoke the function "setClassType(<YourEntity.class>)" and instantiate "new ContentManagedData(CMSService, NameOfTheColumn)" to obtain a HashMap which contains all the elements from the table for the specified column.
+- It is necessary to enable the Vinculum configuration. You can create a new Config class and apply the @EnableVinculum annotation or use it in an already existing one.
+- Create a new entity that implements "FilterableByColumn". In this class you have to specify the different fields according to your Headless CMS database schema.
+- In your controller you just need to Autowire the CMDService, so you will be able to retrieve a map with the desired information as a ContentManagedData.
+
+For a real example, check in: http://hawcode.com/vinculum

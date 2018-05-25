@@ -6,7 +6,7 @@
     <groupId>com.hawcode</groupId>
     <artifactId>vinculum</artifactId>
     <version>0.0.3</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,7 +17,7 @@
 
     <name>Vinculum</name>
     <description>Vinculum is a dependency for adding an abstraction layer in the development of applications.
-        It allows the developer to retrieve data from CMS-Headless DBs. The goal of the dependency is to decouple the
+        It allows the developer to retrieve data from Headless CMS DBs. The goal of the dependency is to decouple the
         web content writing/creation tasks and the Software development tasks.
     </description>
     <url>http://www.hawcode.com/vinculum</url>
