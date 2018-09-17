@@ -4,7 +4,7 @@
 
     <groupId>com.hawcode</groupId>
     <artifactId>vinculum</artifactId>
-    <version>1</version>
+    <version>2-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <parent>
@@ -54,7 +54,7 @@
         <connection>scm:git:git@github.com:hawcode/vinculum.git</connection>
         <developerConnection>scm:git:ssh://github.com:hawcode/vinculum.git</developerConnection>
         <url>https://github.com/hawcode/vinculum</url>
-        <tag>1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
