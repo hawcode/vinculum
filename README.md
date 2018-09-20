@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/License-GNU%20General%20Public%20License%203.0-brightgreen.svg)](http://www.gnu.org/licenses/gpl-3.0.txt)
 [![Maven Central](https://img.shields.io/maven-central/v/com.hawcode/vinculum.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.hawcode%22%20AND%20a:%22vinculum%22)
 
+![Alt text](https://www.hawcode.com/logo_vinculum.png "Vinculum")
+
 # Vinculum
 Vinculum is a dependency that allows connecting a Java application with a Headless CMS. It adds an abstraction layer in the development of applications when retrieving data from the Headless CMS DBs. The goal of Vinculum is to decouple web content creation tasks from the development tasks.
 
